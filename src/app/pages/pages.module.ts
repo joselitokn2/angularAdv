@@ -10,6 +10,7 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 
 import { ChartsModule } from 'ng2-charts';
 import { GraficoComponent } from '../components/grafico/grafico.component';
+import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 
 
 
@@ -20,8 +21,8 @@ import { GraficoComponent } from '../components/grafico/grafico.component';
         ProgressComponent,
         Graficas1Component,
         IncrementadorComponent,
-        GraficoComponent
-    ],
+        GraficoComponent,
+        AccoutSettingsComponent  ],
     exports : [
       DashboardComponent,
       ProgressComponent,
