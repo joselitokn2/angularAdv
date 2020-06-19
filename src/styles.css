@@ -7,3 +7,8 @@
 .pointer {
     cursor: pointer;
 }
+
+.previsualizarImagen {
+    width: 150px;
+    margin: auto;
+}

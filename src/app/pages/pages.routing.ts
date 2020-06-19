@@ -8,6 +8,7 @@ import { AccoutSettingsComponent } from './accout-settings/accout-settings.compo
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { LoginGuardGuard } from '../services/service.index';
+import { ProfileComponent } from './profile/profile.component';
 
 const pagesRoutes: Routes = [
   {
@@ -40,6 +41,11 @@ const pagesRoutes: Routes = [
         path: 'account-settings',
         component: AccoutSettingsComponent,
         data: { titulo: 'Ajustes del Tema' },
+      },
+      {
+        path: 'perfil',
+        component: ProfileComponent,
+        data: { titulo: 'Perfil de usuario' },
       },
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     ],

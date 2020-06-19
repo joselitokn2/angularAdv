@@ -8,10 +8,17 @@ import {
   SharedService,
 } from './service.index';
 import { UsuarioService } from './usuario/usuario.service';
+import { SubirImagenService } from './subir-imagen/subir-imagen.service';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],
-  providers: [SettingsService, SidebarService, SharedService, UsuarioService],
+  providers: [
+    SettingsService,
+    SidebarService,
+    SharedService,
+    UsuarioService,
+    SubirImagenService,
+  ],
   declarations: [],
 })
 export class ServiceModule {}
