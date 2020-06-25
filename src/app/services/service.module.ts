@@ -9,6 +9,7 @@ import {
 } from './service.index';
 import { UsuarioService } from './usuario/usuario.service';
 import { SubirImagenService } from './subir-imagen/subir-imagen.service';
+import { ModalCargaService } from '../components/modal-carga/modalCarga.service';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],
@@ -18,6 +19,7 @@ import { SubirImagenService } from './subir-imagen/subir-imagen.service';
     SharedService,
     UsuarioService,
     SubirImagenService,
+    ModalCargaService,
   ],
   declarations: [],
 })

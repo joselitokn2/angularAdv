@@ -12,3 +12,29 @@
     width: 150px;
     margin: auto;
 }
+
+button {
+    margin: 1px;
+}
+
+.imagenPeque {
+    width: 50px;
+}
+
+.columna80 {
+    width: 80px;
+}
+
+.fondo-modal {
+    background-color: rgba(56, 47, 47, 0.4);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 8888;
+    width: 100%;
+    height: 100%;
+}
+
+.oculto {
+    display: none;
+}

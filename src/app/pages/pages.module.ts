@@ -16,6 +16,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { PipesModule } from '../pipes/pipes.module';
 import { ProfileComponent } from './profile/profile.component';
 import { CommonModule } from '@angular/common';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { ModalCargaComponent } from '../components/modal-carga/modal-carga.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,19 @@ import { CommonModule } from '@angular/common';
     Graficas1Component,
     IncrementadorComponent,
     GraficoComponent,
+    ModalCargaComponent,
     AccoutSettingsComponent,
     PromesasComponent,
     RxjsComponent,
     ProfileComponent,
+    UsuariosComponent,
   ],
-  exports: [DashboardComponent, ProgressComponent, Graficas1Component],
+  exports: [
+    DashboardComponent,
+    ProgressComponent,
+    Graficas1Component,
+    UsuariosComponent,
+  ],
   imports: [
     SharedModule,
     PAGES_ROUTES,

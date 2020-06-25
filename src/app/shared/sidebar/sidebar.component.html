@@ -7,31 +7,47 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li class="user-profile">
-                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img [src]="usuario.imagen | imagen" alt="user" /><span class="hide-menu">{{usuario.nombre}} </span></a>
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><img [src]="usuario.imagen | imagen" alt="user" /><span class="hide-menu">{{ usuario.nombre }}
+            </span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a routerLinkActive="Active" routerLink="/perfil">Perfil </a></li>
+                        <li>
+                            <a routerLinkActive="Active" routerLink="/perfil">Perfil </a>
+                        </li>
                         <li><a href="javascript:void()">My Balance</a></li>
                         <li><a href="javascript:void()">Inbox</a></li>
-                        <li><a routerLinkActive="Active" routerLink="/account-settings">Account Setting</a></li>
-                        <li><a (click)="usuarioService.logout()" class="pointer">Logout</a></li>
+                        <li>
+                            <a routerLinkActive="Active" routerLink="/account-settings"><i class="mdi-account-settings"></i>Configurar cuenta</a
+              >
+            </li>
+            <li>
+              <a (click)="usuarioService.logout()" class="pointer">Logout</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">PERSONAL</li>
 
                 <li *ngFor="let menu of sidebar.menu">
-                    <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i [class]="menu.icono"></i><span class="hide-menu">{{ menu.titulo }} <span class="label label-rouded label-themecolor pull-right">{{ menu.submenu.length }}</span></span></a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li *ngFor="let submenu of menu.submenu">
-                            <a routerLinkActive="active" [routerLink]="[ submenu.url ]">{{ submenu.titulo }} </a>
-                        </li>
-                        <!-- <li><a href="index.html">Minimal </a></li>
+                    <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i [class]="menu.icono"></i
+            ><span class="hide-menu"
+              >{{ menu.titulo }}
+              <span class="label label-rouded label-themecolor pull-right">{{
+                menu.submenu.length
+              }}</span></span
+            ></a
+          >
+          <ul aria-expanded="false" class="collapse">
+            <li *ngFor="let submenu of menu.submenu">
+              <a routerLinkActive="active" [routerLink]="[submenu.url]"
+                >{{ submenu.titulo }}
+              </a>
+                </li>
+                <!-- <li><a href="index.html">Minimal </a></li>
                                 <li><a href="index2.html">Analytical</a></li>
                                 <li><a href="index3.html">Demographical</a></li>
                                 <li><a href="index4.html">Modern</a></li>-->
-                    </ul>
-                </li>
-
+            </ul>
+            </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

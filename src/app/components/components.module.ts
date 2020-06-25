@@ -4,29 +4,16 @@ import { ComponentsComponent } from './components.component';
 import { FormsModule } from '@angular/forms';
 import { IncrementadorComponent } from './incrementador/incrementador.component';
 import { GraficoComponent } from './grafico/grafico.component';
-
+import { ModalCargaComponent } from './modal-carga/modal-carga.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-
-  ],
+  imports: [CommonModule, FormsModule],
   declarations: [
     ComponentsComponent,
     IncrementadorComponent,
-    GraficoComponent
+    GraficoComponent,
+    ModalCargaComponent,
   ],
-  exports : [
-    IncrementadorComponent,
-    GraficoComponent
-
-            ]
-
+  exports: [IncrementadorComponent, GraficoComponent, ModalCargaComponent],
 })
-export class ComponentsModule {
-
- }
-
-
-
+export class ComponentsModule {}
