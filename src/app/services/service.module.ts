@@ -10,6 +10,8 @@ import {
 import { UsuarioService } from './usuario/usuario.service';
 import { SubirImagenService } from './subir-imagen/subir-imagen.service';
 import { ModalCargaService } from '../components/modal-carga/modalCarga.service';
+import { HospitalService } from './hospital/hospital.service';
+import { MedicoService } from './medico/medico.service';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],
@@ -18,6 +20,8 @@ import { ModalCargaService } from '../components/modal-carga/modalCarga.service'
     SidebarService,
     SharedService,
     UsuarioService,
+    HospitalService,
+    MedicoService,
     SubirImagenService,
     ModalCargaService,
   ],

@@ -18,6 +18,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { CommonModule } from '@angular/common';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { ModalCargaComponent } from '../components/modal-carga/modal-carga.component';
+import { HospitalesComponent } from './hospitales/hospitales.component';
+import { MedicosComponent } from './medicos/medicos.component';
+import { MedicoComponent } from './medicos/medico.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { ModalCargaComponent } from '../components/modal-carga/modal-carga.compo
     RxjsComponent,
     ProfileComponent,
     UsuariosComponent,
+    HospitalesComponent,
+    MedicosComponent,
+    MedicoComponent,
   ],
   exports: [
     DashboardComponent,
