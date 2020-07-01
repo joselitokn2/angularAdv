@@ -1,19 +1,13 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ComponentsComponent } from './components.component';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IncrementadorComponent } from './incrementador/incrementador.component';
+import { ComponentsComponent } from './components.component';
 import { GraficoComponent } from './grafico/grafico.component';
-import { ModalCargaComponent } from './modal-carga/modal-carga.component';
+import { IncrementadorComponent } from './incrementador/incrementador.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule],
-  declarations: [
-    ComponentsComponent,
-    IncrementadorComponent,
-    GraficoComponent,
-    ModalCargaComponent,
-  ],
-  exports: [IncrementadorComponent, GraficoComponent, ModalCargaComponent],
+  declarations: [ComponentsComponent, IncrementadorComponent, GraficoComponent],
+  exports: [IncrementadorComponent, GraficoComponent],
 })
 export class ComponentsModule {}

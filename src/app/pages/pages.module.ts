@@ -25,13 +25,13 @@ import { BuscadorComponent } from './buscador/buscador.component';
 
 @NgModule({
   declarations: [
-    PagesComponent,
+    //PagesComponent,
     DashboardComponent,
     ProgressComponent,
     Graficas1Component,
     IncrementadorComponent,
     GraficoComponent,
-    ModalCargaComponent,
+    //ModalCargaComponent,
     AccoutSettingsComponent,
     PromesasComponent,
     RxjsComponent,
