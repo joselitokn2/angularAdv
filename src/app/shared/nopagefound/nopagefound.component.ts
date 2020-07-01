@@ -4,11 +4,11 @@ declare function init_plugins();
 @Component({
   selector: 'app-nopagefound',
   templateUrl: './nopagefound.component.html',
-  styles: [],
+  styleUrls: ['./nopagefound.component.css'],
 })
 export class NopagefoundComponent implements OnInit {
   constructor() {}
-
+  ano: number = new Date().getFullYear();
   ngOnInit(): void {
     init_plugins();
   }

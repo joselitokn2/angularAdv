@@ -1,4 +1,5 @@
 export { LoginGuardGuard } from './guards/login-guard.guard';
+export { AdministradorGuard } from './guards/administrador.guard';
 export { UsuarioService } from './usuario/usuario.service';
 export { SubirImagenService } from './subir-imagen/subir-imagen.service';
 export { SettingsService } from './settings/settings.service';

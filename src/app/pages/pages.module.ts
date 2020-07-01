@@ -21,6 +21,7 @@ import { ModalCargaComponent } from '../components/modal-carga/modal-carga.compo
 import { HospitalesComponent } from './hospitales/hospitales.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { MedicoComponent } from './medicos/medico.component';
+import { BuscadorComponent } from './buscador/buscador.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MedicoComponent } from './medicos/medico.component';
     HospitalesComponent,
     MedicosComponent,
     MedicoComponent,
+    BuscadorComponent,
   ],
   exports: [
     DashboardComponent,

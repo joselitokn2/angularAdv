@@ -7,12 +7,13 @@ import { ProgressComponent } from './progress/progress.component';
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
-import { LoginGuardGuard } from '../services/service.index';
+import { LoginGuardGuard, AdministradorGuard } from '../services/service.index';
 import { ProfileComponent } from './profile/profile.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 import { MedicosComponent } from './medicos/medicos.component';
 import { HospitalesComponent } from './hospitales/hospitales.component';
 import { MedicoComponent } from './medicos/medico.component';
+import { BuscadorComponent } from './buscador/buscador.component';
 
 const pagesRoutes: Routes = [
   {
@@ -51,10 +52,16 @@ const pagesRoutes: Routes = [
         component: ProfileComponent,
         data: { titulo: 'Perfil de usuario' },
       },
+      {
+        path: 'buscador/:busqueda',
+        component: BuscadorComponent,
+        data: { titulo: 'Buscador' },
+      },
       // Administrador
       {
         path: 'usuarios',
         component: UsuariosComponent,
+        canActivate: [AdministradorGuard],
         data: { titulo: 'Administrador de usuarios' },
       },
       {

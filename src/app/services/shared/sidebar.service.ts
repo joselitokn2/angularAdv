@@ -1,31 +1,12 @@
 import { Injectable } from '@angular/core';
+import { UsuarioService } from '../usuario/usuario.service';
 
 @Injectable()
 export class SidebarService {
-  menu: any = [
-    {
-      titulo: 'Principal',
+  menu: any = [];
 
-      icono: 'mdi mdi-hospital',
-      /*   icono: 'mdi mdi-gauge', */
-      submenu: [
-        { titulo: 'Dashboard', url: '/dashboard' },
-        { titulo: 'ProgressBar', url: '/progress' },
-        { titulo: 'Gráficas', url: '/graficas1' },
-        { titulo: 'Promesas', url: '/promesas' },
-        { titulo: 'Rxjs', url: '/rxjs' },
-      ],
-    },
-    {
-      titulo: 'Administrador',
-      icono: 'mdi mdi-folder-lock-open',
-      submenu: [
-        { titulo: 'Usuarios', url: '/usuarios' },
-        { titulo: 'Hospitales', url: '/hospitales' },
-        { titulo: 'Medicos', url: '/medicos' },
-      ],
-    },
-  ];
-
-  constructor() {}
+  constructor(public usuarioService: UsuarioService) {}
+  obtenerMenu() {
+    this.menu = this.usuarioService.menu;
+  }
 }

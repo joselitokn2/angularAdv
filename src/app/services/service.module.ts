@@ -12,6 +12,8 @@ import { SubirImagenService } from './subir-imagen/subir-imagen.service';
 import { ModalCargaService } from '../components/modal-carga/modalCarga.service';
 import { HospitalService } from './hospital/hospital.service';
 import { MedicoService } from './medico/medico.service';
+import { LoginGuardGuard } from './guards/login-guard.guard';
+import { AdministradorGuard } from './guards/administrador.guard';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],
@@ -24,6 +26,8 @@ import { MedicoService } from './medico/medico.service';
     MedicoService,
     SubirImagenService,
     ModalCargaService,
+    LoginGuardGuard,
+    AdministradorGuard,
   ],
   declarations: [],
 })
