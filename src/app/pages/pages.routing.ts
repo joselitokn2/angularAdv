@@ -1,5 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
-import { AdministradorGuard } from '../services/service.index';
+import {
+  AdministradorGuard,
+  RenovarTokenGuard,
+} from '../services/service.index';
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -17,6 +20,7 @@ const pagesRoutes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+    canActivate: [RenovarTokenGuard],
     data: { titulo: 'Dashboard' },
   },
   {

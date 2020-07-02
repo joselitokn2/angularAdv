@@ -22,6 +22,27 @@ export class UsuarioService {
   ) {
     this.cargarStorage();
   }
+  renovarToken() {
+    let url = URL_SERVICIOS + '/login/renovartoken';
+    url += '?token=' + this.token;
+    return this.http.get(url).pipe(
+      map((resp: any) => {
+        this.token = resp.token;
+        localStorage.setItem('token', this.token);
+        console.log('token renovadooooo');
+        return true;
+      }),
+      catchError((error: any) => {
+        this.router.navigate(['/login']);
+        swal(
+          'No se ha podido renovar el token',
+          'No se pudo renovar el token',
+          'error'
+        );
+        return throwError(error);
+      })
+    );
+  }
   estaLogeado() {
     return this.token.length > 5 ? true : false;
   }
@@ -96,7 +117,7 @@ export class UsuarioService {
       }),
       catchError((error: any) => {
         swal(error.error.mensaje, error.error.errors.message, 'error');
-       // swal('Fallo en el registro', 'Este email ya esta registrado', 'error');
+        // swal('Fallo en el registro', 'Este email ya esta registrado', 'error');
         return throwError(error);
       })
     );
