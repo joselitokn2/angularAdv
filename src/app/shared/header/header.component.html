@@ -18,7 +18,7 @@
           />
           <!-- Light Logo icon -->
           <img
-            src="assets/images/logo-light-icon.png"
+            src="assets/images/logo-icon.png"
             alt="homepage"
             class="light-logo"
           />
@@ -28,11 +28,12 @@
           <!-- dark Logo text -->
           <!--    <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" /> -->
           <!-- Light Logo text -->
-          <img
+        <!--   <img
             src="assets/images/logo-light-text.png"
             class="light-logo"
             alt="homepage"
-        /></span>
+        /> -->
+      </span>
             </a>
         </div>
         <!-- ============================================================== -->
@@ -195,13 +196,11 @@
                             </li>
                             <li role="separator" class="divider"></li>
                             <li>
-                                <a href="#"><i class="ti-settings"></i> Configuración de cuenta</a
-                >
-              </li>
-              <li role="separator" class="divider"></li>
-              <li>
-                <a (click)="usuarioService.logout()" class="pointer"
-                  ><i class="fa fa-power-off"></i> Logout</a
+                                <a routerLinkActive="Active" routerLink="/account-settings"><i class="ti-settings"></i> Configuración de cuenta</a>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                            <li>
+                                <a (click)="usuarioService.logout()" class="pointer"><i class="fa fa-power-off"></i> Logout</a
                 >
               </li>
             </ul>
