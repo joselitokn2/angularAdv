@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   usuarios: Usuario[] = [];
   puntero = 0;
   totalUsuarios: number;
+  d = new Date();
 
   constructor(public usuarioService: UsuarioService, public router: Router) {}
 
