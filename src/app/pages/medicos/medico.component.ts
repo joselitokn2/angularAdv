@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Medico } from 'src/app/models/medico.model';
-import { MedicoService, HospitalService } from 'src/app/services/service.index';
 import { NgForm } from '@angular/forms';
-import { Hospital } from 'src/app/models/hospital.model';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ModalCargaService } from 'src/app/components/modal-carga/modalCarga.service';
+import { Hospital } from 'src/app/models/hospital.model';
+import { Medico } from 'src/app/models/medico.model';
+import { HospitalService, MedicoService } from 'src/app/services/service.index';
 
 @Component({
   selector: 'app-medico',
@@ -36,6 +36,9 @@ export class MedicoComponent implements OnInit {
     });
     this.modalCargaService.notificacion.subscribe((resp) => {
       //  console.log(resp);
+      if (resp === undefined || null) {
+        this.medico.imagen = 'pepito';
+      }
       this.medico.imagen = resp.medico.imagen;
     });
   }
